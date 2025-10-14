@@ -63,7 +63,19 @@
 % ABSTRACT
 \begin{tcolorbox}[mybox, title=Abstract]
 \large
-We present stylized empirical facts from statistical analysis of price variations in financial markets. We describe distributional properties, tail properties, extreme fluctuations, and linear/nonlinear dependence of returns. These properties invalidate many common statistical approaches used to study financial data.
+
+We present a set of stylized empirical facts emerging from the statistical
+analysis of price variations in various types of financial markets. We first
+discuss some general issues common to all statistical studies of financial time
+series. Various statistical properties of asset returns are then described:
+distributional properties, tail properties and extreme fluctuations, pathwise
+regularity, linear and nonlinear dependence of returns in time and across
+stocks. Our description emphasizes properties common to a wide variety of
+markets and instruments. We then show how these statistical properties
+invalidate many of the common statistical approaches used to study financial
+data sets and examine some of the statistical problems encountered in each
+case.
+
 \end{tcolorbox}
 
 \vspace{0.5cm}
@@ -79,13 +91,18 @@ We present stylized empirical facts from statistical analysis of price variation
 % MOTIVATION
 \begin{tcolorbox}[mybox, title=Motivation]
 \large
-Despite different assets being influenced by different events, price series exhibit remarkably similar statistical properties.
+Although statistical properties of financial time series have been studied for decades, the emergence of high-frequency data poses a critical challenge to researchers in synthetically and meaningfully capturing the properties of this massive data set.
+To address this challenge, a set of universal properties common across different markets have been identified by independent studies and are classified as \textbf{stylized facts}.
+These stylized facts, such as \textbf{heavy tails} and \textbf{non-linear dependence}, fundamentally invalidate many of the common statistical approaches used to study financial data.
+Our goal is to provide a pedagogical overview of these empirical properties, focusing on the data's characteristics and examining the resulting statistical issues encountered during real financial analysis.
 
-\vspace{0.3cm}
-\textbf{Question:} What common properties exist across different financial instruments, markets, and time periods?
+% Despite different assets being influenced by different events, price series exhibit remarkably similar statistical properties.
 
-\vspace{0.3cm}
-These \textbf{stylized facts} constrain any realistic stochastic model.
+% \vspace{0.3cm}
+% \textbf{Question:} What common properties exist across different financial instruments, markets, and time periods?
+
+% \vspace{0.3cm}
+% These \textbf{stylized facts} constrain any realistic stochastic model.
 \end{tcolorbox}
 
 \vspace{0.5cm}
@@ -121,7 +138,15 @@ Returns display \textbf{power-law tails} with $\alpha \in [2,5]$. Excludes both 
 
 \vspace{0.5cm}
 
-% AUTOCORRELATION
+
+
+\end{column}
+
+% ============= RIGHT COLUMN =============
+\begin{column}{.48\linewidth}
+
+
+  % AUTOCORRELATION
 \begin{tcolorbox}[mybox, title=Linear Autocorrelations]
 \begin{center}
 \includegraphics[width=0.95\linewidth,height=18cm,keepaspectratio]{figure6_autocorr.png}
@@ -131,23 +156,19 @@ Returns display \textbf{power-law tails} with $\alpha \in [2,5]$. Excludes both 
 Returns are \textbf{insignificant} except at very short scales ($<$20 min). Supports efficient markets but does NOT imply independence.
 \end{tcolorbox}
 
-\end{column}
 
-% ============= RIGHT COLUMN =============
-\begin{column}{.48\linewidth}
+% % VOLATILITY CLUSTERING
+% \begin{tcolorbox}[mybox, title=Volatility Clustering]
+% \begin{center}
+% \includegraphics[width=0.95\linewidth,height=18cm,keepaspectratio]{figure1_bmw.png}
+% \end{center}
+% \vspace{0.3cm}
+% \large
+% \textbf{Large variations cluster in time.} Autocorrelation decays as: 
+% $$C_\alpha(\tau) \sim A/\tau^\beta, \quad \beta \in [0.2, 0.4]$$
 
-% VOLATILITY CLUSTERING
-\begin{tcolorbox}[mybox, title=Volatility Clustering]
-\begin{center}
-\includegraphics[width=0.95\linewidth,height=18cm,keepaspectratio]{figure1_bmw.png}
-\end{center}
-\vspace{0.3cm}
-\large
-\textbf{Large variations cluster in time.} Autocorrelation decays as: 
-$$C_\alpha(\tau) \sim A/\tau^\beta, \quad \beta \in [0.2, 0.4]$$
-
-Sign of \textbf{long-range dependence} in volatility.
-\end{tcolorbox}
+% Sign of \textbf{long-range dependence} in volatility.
+% \end{tcolorbox}
 
 \vspace{0.5cm}
 
@@ -168,20 +189,20 @@ Absolute/squared returns show strong persistence over days/weeks.
 \large
 \begin{enumerate}
 \item Absence of autocorrelations
-\item \textbf{Heavy tails} ($\alpha \in [2,5]$)
+\item Heavy tails % ($\alpha \in [2,5]$)
 \item Gain/loss asymmetry
 \item Aggregational Gaussianity
 \item Intermittency
-\item \textbf{Volatility clustering}
+\item Volatility clustering
 \item Conditional heavy tails
-\item \textbf{Slow decay} of volatility correlations
+\item Slow decay of volatility correlations
 \item Leverage effect
 \item Volume/volatility correlation
 \item Asymmetry in time scales
 \end{enumerate}
 
-\vspace{0.2cm}
-Most models fail to reproduce all features simultaneously.
+% \vspace{0.2cm}
+% Most models fail to reproduce all features simultaneously.
 \end{tcolorbox}
 
 \vspace{0.5cm}
@@ -195,6 +216,17 @@ Most models fail to reproduce all features simultaneously.
 \item Properties qualitatively stable; quantitative estimates challenging
 \item Critical for \textbf{risk management} and VaR calculations
 \end{itemize}
+\end{tcolorbox}
+
+
+\vspace{0.5cm}
+
+% Acknowledgments
+\begin{tcolorbox}[mybox, title=Acknowledgments]
+\large
+The author thanks Rokhsaneh Ghandi for constant encouragement and Doyne Farmer for many helpful comments on this
+manuscript. This work has been supported by the CNRS Research Program on Quantitative Methods in Financial Modeling (FIQUAM).
+
 \end{tcolorbox}
 
 \end{column}
